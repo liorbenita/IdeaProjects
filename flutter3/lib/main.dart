@@ -1,5 +1,7 @@
 
 
+
+
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter3/ui/home.dart';
@@ -16,7 +18,7 @@ theme: ThemeData.dark(),
      return Scaffold(
          appBar: AppBar(
            actions: <Widget>[
-             IconButton(icon:Icon( Icons.arrow_downward) ,onPressed:()=> 'learnHowtochangeRoute ')
+             IconButton(icon:Icon( Icons.arrow_downward) ,onPressed:()=> 'fdks;k')
            ],
          ),
          body: Center(
@@ -28,7 +30,7 @@ theme: ThemeData.dark(),
      );
    },
    'prehome': (BuildContext context) {
-     return Home();
+     return ScaffoldExample();
    },
    'afterhome': (BuildContext context) {
      return ScaffoldExample();

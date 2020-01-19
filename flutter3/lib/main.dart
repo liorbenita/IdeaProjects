@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter3/ui/home.dart';
 
+import 'ui/home.dart';
+
 //void main() => runApp(ScaffoldExample());
 void main() => runApp(new MaterialApp(
   home: ScaffoldExample(),
@@ -28,6 +30,9 @@ theme: ThemeData.dark(),
    'prehome': (BuildContext context) {
      return Home();
    },
+   'afterhome': (BuildContext context) {
+     return ScaffoldExample();
+   },
  },
-  initialRoute: 'prehome',
+  initialRoute: 'afterhome',
  ));

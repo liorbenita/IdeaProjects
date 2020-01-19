@@ -4,23 +4,27 @@ class ScaffoldExample extends StatelessWidget {
   _tapButton() => debugPrint(
     'hacked'
   );
+  _tapAccountButton() => debugPrint(
+    'AccountBox'
+  );
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Lior and Mush",
+          "stylish app bar",
           textDirection: TextDirection.ltr,
         ),
         centerTitle: true,
         backgroundColor: Colors.pinkAccent.shade700,
         actions: <Widget>[
           IconButton(icon: Icon(Icons.account_balance), onPressed: ()=>debugPrint('Over Draft')),
-          IconButton(icon: Icon(Icons.access_alarms), onPressed: _tapButton)
+          IconButton(icon: Icon(Icons.access_alarms), onPressed: _tapButton),
+          IconButton(icon: Icon(Icons.account_box), onPressed: _tapAccountButton)
         ],
       ),
       body: Center(
-        child: Text('hello mush can i touch your Tusik'),
+        child: Text('fisrt application test'),
       ),
     );
   }

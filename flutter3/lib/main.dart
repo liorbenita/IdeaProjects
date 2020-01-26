@@ -10,7 +10,7 @@ import 'ui/home.dart';
 
 //void main() => runApp(ScaffoldExample());
 void main() => runApp(new MaterialApp(
-  home: ScaffoldExample(),
+  home: Wisdom(),
 theme: ThemeData.dark(),
 
  routes:  {
@@ -35,6 +35,15 @@ theme: ThemeData.dark(),
    'afterhome': (BuildContext context) {
      return ScaffoldExample();
    },
+   'after1home': (BuildContext context) {
+     return BizCard();
+   },
+   'after2home': (BuildContext context) {
+     return Wisdom();
+   },
+   'after3home': (BuildContext context) {
+     return BillSplitter();
+   },
  },
-  initialRoute: 'afterhome',
+  initialRoute: 'after3home',
  ));

@@ -44,6 +44,9 @@ theme: ThemeData.dark(),
    'after3home': (BuildContext context) {
      return BillSplitter();
    },
+   'after4home': (BuildContext context) {
+     return QuizApp();
+   },
  },
-  initialRoute: 'after3home',
+  initialRoute: 'after2home',
  ));

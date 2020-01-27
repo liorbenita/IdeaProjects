@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter3/model/Question.dart';
 
 class CustomButton extends StatelessWidget {
   @override
@@ -51,7 +52,7 @@ class ScaffoldExample extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.red,
         onPressed: ()=> debugPrint('YO YO yO '),
-        child: IconButton(icon: Icon(Icons.access_alarms),),
+        child: IconButton(icon: Icon(Icons.access_alarms), onPressed: () {debugPrint('dsadasdlj');},),
       ),
       bottomNavigationBar:BottomNavigationBar(backgroundColor: Colors.deepPurple,items: [
         BottomNavigationBarItem(icon: Icon(Icons.account_circle),
@@ -467,6 +468,52 @@ class _BillSplitterState extends State<BillSplitter> {
     return totalTip;
   }
 }
+
+class QuizApp extends StatefulWidget {
+  @override
+  _QuizAppState createState() => _QuizAppState();
+}
+
+class _QuizAppState extends State<QuizApp> {
+
+  List questionBank = [
+    Question.name('lokodoko', false),
+    Question.name('lokodoko1', false),
+    Question.name('lokodoko2', false),
+    Question.name('lokodoko3', false),
+    Question.name('lokodoko4', false),
+    Question.name('lokodoko5', true),
+  ];
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('True Citizen'),
+        centerTitle: true,
+        backgroundColor: Colors.redAccent,
+      ),
+      backgroundColor: Colors.blueGrey,
+      body: Container(
+        child: Column(
+          mainAxisAlignment:MainAxisAlignment.center ,
+//          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Center(
+                child: Image.asset('images/flag.png', height: 180, width: 250,)),
+            Container(
+              height: 120,
+              child: Text(questionBank[1 ].questionText),
+            ),
+
+            Spacer(),
+          ],
+
+        )
+      )
+    );
+  }
+}
+
 
  
  
